@@ -19,5 +19,5 @@ gem 'foundation-rails'
 gem 'spring',        group: :development
 
 group :development, :test do
-  gem 'debugger'
+  gem 'pry-rails'
 end
