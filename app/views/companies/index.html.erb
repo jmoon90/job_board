@@ -1,0 +1,7 @@
+<div class='row'>
+  <ul>
+  <% @companies.each do |company| %>
+    <li><b><%= link_to company.name, company_path(company.id) %></b></li>
+  <% end %>
+  </ul>
+</div>
