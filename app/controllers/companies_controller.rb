@@ -1,10 +1,13 @@
 class CompaniesController < ApplicationController
   def index
     @companies = Company.all
+    @time = Time.now.strftime("%B  %d")
   end
 
   def show
-    @company = Company.find(params[:id])
+    @companies = Company.companies(Company.all)
+    @name = Company.find(params[:id]).name
+    @company = @companies[@name]
   end
 
   def new

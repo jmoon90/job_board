@@ -1,1 +1,12 @@
-<h1><%= @company.name %></h1>
+<h1><%= @name %> - <%= link_to 'go back', root_path %></h1>
+
+<ul>
+  <% @company.each do |job| %>
+    <% if job.attributes['href'].nil? %>
+      <li><%= link_to job.children.text, job.attributes.values[0].value %></li>
+    <% else %>
+      <li><%= link_to job.children.text, job.attributes["href"].value %></li>
+    <% end %>
+  <% end %>
+</ul>
+
