@@ -20,7 +20,10 @@ class Company < ActiveRecord::Base
         'careers stackoverflow' => 'h3 .job-link',
         'monster' => '.fnt11 span',
         'indeed' => '.jobtitle a',
+        'ruby on rails' => '#content li a',
+        'we work remotely' => '#category-2 li a',
         'flex jobs' => '#joblist a'
+
      }
   end
 
